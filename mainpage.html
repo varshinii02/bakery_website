@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <title>BAKERS' MAGIC</title>
+  <style>
+    body {
+      background-color: lavender;
+    }
+    
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+    }
+
+    li {
+      float: left;
+    }
+
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    li a:hover:not(.active) {
+      background-color: pink;
+    }
+
+    li a.active {
+      background-color: lightpink;
+    }
+
+    .mySlides {
+      display: none;
+    }
+
+    .w3-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+
+<h1 style="text-align:center; font-size:50px; background-color:lightpink;">BAKER'S MAGIC</h1>
+
+<ul>
+  <li><a class="active" href="mainpage.html#news">Home</a></li>
+  <li><a href="login.html">Login</a></li>
+  <li><a href="celebration_cakes.html">Celebration Cakes</a></li>
+  <li><a href="cupcakes.html">Cup Cakes</a></li>
+  <li><a href="about.html">About</a></li>
+</ul>
+
+<div class="w3-content w3-section" style="max-width:500px">
+  <img class="mySlides" src="https://assets.winni.in/product/primary/2022/9/73528.jpeg?dpr=2&w=220" style="width:100%">
+  <img class="mySlides" src="https://grandbaby-cakes.com/wp-content/uploads/2022/09/best-black-forest-cake-recipe.jpg" style="width:100%">
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {
+    myIndex = 1;
+  }
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+
+</body>
+</html>
